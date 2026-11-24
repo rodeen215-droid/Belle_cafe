@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Bella Cafe | Feedback</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#260b04;color:#2b160f;font-family:Arial,sans-serif;padding:35px 16px}
+main{max-width:650px;margin:25px auto;background:#fff8ed;padding:34px;border:1px solid #e8c98b}
+h1{font:40px Georgia;color:#4a2416;margin:0 0 10px}p{line-height:1.6;color:#806b5c}
+label{display:block;margin:18px 0 7px;font-size:14px}input,select,textarea{width:100%;padding:13px;border:1px solid #cbb69b;background:white;font:15px Arial}
+button{margin-top:18px;padding:14px 22px;background:#260b04;color:#e8c98b;border:0;font-size:14px;cursor:pointer}
+a{color:#70452e}.small{font-size:12px}
+</style></head><body><main>
+<h1>Bella Cafe</h1><p>We value your opinion. Tell us about your visit in Amman.</p>
+<form id="feedbackForm">
+<label for="name">Your name</label><input id="name" name="name" placeholder="Your name">
+<label for="rating">How was your experience?</label><select id="rating" name="rating"><option>Excellent</option><option>Very good</option><option>Good</option><option>Fair</option><option>Needs improvement</option></select>
+<label for="service">How was our service?</label><select id="service" name="service"><option>Excellent</option><option>Very good</option><option>Good</option><option>Needs improvement</option></select>
+<label for="comments">Your comments or suggestions</label><textarea id="comments" name="comments" rows="5" placeholder="Write your feedback here..."></textarea>
+<button type="submit">Send Feedback</button>
+</form>
+<p id="message" role="status"></p>
+<p class="small">Note: This is a preview form. To receive and store customer responses, connect it to a form service or website backend before publishing.</p>
+<p><a href="index.html">← Back to Bella Cafe</a></p>
+</main>
+<script>
+document.getElementById('feedbackForm').addEventListener('submit',function(e){
+ e.preventDefault();
+ document.getElementById('message').textContent='Thank you for sharing your feedback with Bella Cafe!';
+ this.reset();
+});
+</script></body></html>
